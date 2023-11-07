@@ -16,6 +16,7 @@ app.get("/", async (req, res) => {
   console.log(searchquery)
   if (searchquery == undefined) {
     try {
+      console.log("hiii")
       const intial = await fetch('https://www.omdbapi.com/?apikey=3f8a2d27&s=jab')
       const indata = await intial.json()
       res.send(indata)
